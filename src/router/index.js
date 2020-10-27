@@ -8,24 +8,23 @@ const routes = [{
     },
     {
         path: "/tomorrow",
-        name: "today",
-        component: () => { '@/views/Tomorrow' }
+        name: "TomorrowPage",
+        component: () => { '../views/Tomorrow' }
     },
     {
         path: "/week",
-        name: "today",
-        component: () => { '@/views/Week' }
-
+        name: "WeekPage",
+        component: () => { '../views/Week' }
     },
     {
         path: "/month",
-        name: "today",
-        component: () => { '@/views/Month' }
+        name: "MonthPage",
+        component: () => { '../views/Month' }
     },
     {
         path: "/year",
-        name: "today",
-        component: () => { '@/views/Year' }
+        name: "YearPage",
+        component: () => { '../views/Year' }
     }
 ]
 

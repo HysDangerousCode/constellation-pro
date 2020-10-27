@@ -17,27 +17,27 @@ var routes = [{
   component: _Today["default"]
 }, {
   path: "/tomorrow",
-  name: "today",
+  name: "TomorrowPage",
   component: function component() {
-    '@/views/Tomorrow';
+    '../views/Tomorrow';
   }
 }, {
   path: "/week",
-  name: "today",
+  name: "WeekPage",
   component: function component() {
-    '@/views/Week';
+    '../views/Week';
   }
 }, {
   path: "/month",
-  name: "today",
+  name: "MonthPage",
   component: function component() {
-    '@/views/Month';
+    '../views/Month';
   }
 }, {
   path: "/year",
-  name: "today",
+  name: "YearPage",
   component: function component() {
-    '@/views/Year';
+    '../views/Year';
   }
 }];
 var router = (0, _vueRouter.createRouter)({
