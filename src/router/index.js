@@ -1,32 +1,37 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import TodayPage from "@/views/Today"
+import { createRouter, createWebHistory } from 'vue-router';
+import TodayPage from '@/views/Today';
+
 
 const routes = [{
         path: "/",
         name: "today",
-        component: TodayPage
+        component: TodayPage,
     },
     {
         path: "/tomorrow",
-        name: "TomorrowPage",
-        component: () => { '../views/Tomorrow' }
+        name: "tomorrow",
+        component: () =>
+            import ("../views/Tomorrow"),
     },
     {
         path: "/week",
-        name: "WeekPage",
-        component: () => { '../views/Week' }
+        name: "week",
+        component: () =>
+            import ("../views/Week"),
     },
     {
         path: "/month",
-        name: "MonthPage",
-        component: () => { '../views/Month' }
+        name: "month",
+        component: () =>
+            import ("../views/Month"),
     },
     {
         path: "/year",
-        name: "YearPage",
-        component: () => { '../views/Year' }
-    }
-]
+        name: "year",
+        component: () =>
+            import ("../views/Year"),
+    },
+];
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
