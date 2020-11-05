@@ -1,21 +1,12 @@
 <template>
-    <div :class="['nav-item',{'nav-current':index===curIdx}]" @click="navClick(index)">{{item}}</div>
+    <div class="nav-item" :data-index="index">{{item}}</div>
 </template>
 <script>
 export default{
     name:"NavItem",
     props:{
         item:String,
-        curIdx:Number,
         index:Number
-    },
-    setup(){
-        const navClick=(index)=>{
-            emit("navClick",index);
-        }
-        return {
-            navClick
-        }
     }
 }
 </script>
