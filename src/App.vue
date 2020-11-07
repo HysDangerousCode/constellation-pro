@@ -32,7 +32,6 @@ export default {
     router.push("/");
     store.commit("setField","today");
     watch(()=>{
-      console.log(router);
       return router.currentRoute.value.name;
     },(value)=>{
       store.commit('setField',value);

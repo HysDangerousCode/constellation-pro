@@ -25,6 +25,7 @@
 import navData from "@/datas/nav";
 import NavItem from "./Item";
 import { ref } from "vue";
+import {useStore} from "vuex";
 import { navCurrent } from "@/directives";
 
 export default {
@@ -36,12 +37,16 @@ export default {
     navCurrent,
   },
   setup() {
-    const curIdx = ref(0);
+    const curIdx = ref(0),
+    store=useStore();
     const navClick = (e) => {
       const className = e.target.className;
       if (className === "nav-item") {
-        const idx = e.target.dataset.index;
+        const tar=e.target,
+         idx = tar.dataset.index,
+         consName=tar.innerText;
         curIdx.value = idx;
+        store.commit("setConsName",consName);
       }
     };
     return {

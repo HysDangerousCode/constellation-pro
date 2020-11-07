@@ -10,5 +10,6 @@ export default async(store) => {
         store.commit("setErrorCode", data.error_code);
         return;
     }
-
+    store.commit("setData", data);
+    // console.log(store.state);
 }

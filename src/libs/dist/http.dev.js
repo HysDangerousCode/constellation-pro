@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 function axiosGet(options) {
   (0, _axios["default"])(options.url + "&key=" + _key.JUHE_APPKEY).then(function (res) {
-    options.success(res);
+    options.success(res.data);
   })["catch"](function (err) {
     options.error(err);
   });

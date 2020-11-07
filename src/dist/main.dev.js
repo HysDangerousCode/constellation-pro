@@ -14,6 +14,8 @@ require("@/assets/css/border.css");
 
 require("@/assets/js/common.js");
 
+var _common2 = _interopRequireDefault(require("@/components/common"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // 批量引入组件
@@ -23,4 +25,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 //     const app = createApp({});
 //     app.component(componentConfig.default.name, componentConfig.default || componentConfig);
 // });
-(0, _vue.createApp)(_App["default"]).use(_store["default"]).use(_router["default"]).mount('#app');
+(0, _vue.createApp)(_App["default"]).use(_store["default"]).use(_common2["default"]).use(_router["default"]).mount('#app');

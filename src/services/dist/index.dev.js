@@ -32,6 +32,9 @@ var _callee = function _callee(store) {
           return _context.abrupt("return");
 
         case 9:
+          store.commit("setData", data); // console.log(store.state);
+
+        case 10:
         case "end":
           return _context.stop();
       }
