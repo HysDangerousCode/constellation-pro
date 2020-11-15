@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .summary-wrapper {
-    padding: 0;
+    padding:  0 0 .1rem 0;
     box-sizing: border-box;
 
     .inner {
