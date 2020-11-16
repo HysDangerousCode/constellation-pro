@@ -27,6 +27,7 @@ import NavItem from "./Item";
 import { ref } from "vue";
 import {useStore} from "vuex";
 import { navCurrent } from "@/directives";
+import getData from "@/services";
 
 export default {
   name: "NavBar",
@@ -47,6 +48,7 @@ export default {
          consName=tar.innerText;
         curIdx.value = idx;
         store.commit("setConsName",consName);
+        getData(store);
       }
     };
     return {

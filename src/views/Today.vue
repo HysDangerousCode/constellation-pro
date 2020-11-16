@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { onMounted, computed } from "vue";
+import { onMounted, computed,ref,onActivated } from "vue";
 import { useStore } from "vuex";
 import getData from "@/services";
 import NumList from "@/components/NumList";
@@ -20,9 +20,17 @@ export default {
   },
   setup() {
     const store = useStore(),
-      state = store.state;
+      state = store.state,
+      status=ref("");
     onMounted(() => {
       getData(store);
+      status.value=state.consName;
+    });
+    onActivated(()=>{
+      if (status.value !== state.consName) {
+        getData(store);
+        status.vaule=state.consName;
+      }
     });
     return {
       todayData: computed(() => state.today),
