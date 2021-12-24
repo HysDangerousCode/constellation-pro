@@ -4,16 +4,16 @@ module.exports = {
         open: false,
         // host: 'localhost',
         // ports: 8080,
-        https: false,
+        https: true,
         hotOnly: false,
         proxy: {
             "/api": {
-                target: "http://web.juhe.cn:8080/",
+                target: "https://web.juhe.cn:8080/",
                 changeOrigin: true,
                 ws: true,
                 secure: false,
                 pathRewrite: {
-                    '^/api': ''
+                    '^/api':'https://web.juhe.cn:8080/'
                 }
             }
         },
