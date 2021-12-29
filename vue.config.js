@@ -8,12 +8,12 @@ module.exports = {
         hotOnly: false,
         proxy: {
             "/api": {
-                target: "https://web.juhe.cn:8080/",
+                target: "http://web.juhe.cn:8080/",
                 changeOrigin: true,
                 ws: true,
                 secure: false,
                 pathRewrite: {
-                    '^/api':'https://web.juhe.cn:8080/'
+                    '^/api':'http://web.juhe.cn:8080/'
                 }
             }
         },
